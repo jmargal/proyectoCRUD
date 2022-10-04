@@ -15,7 +15,6 @@
 	String password = request.getParameter("contrasena");
 
 	DAO_User d = new DAO_User();
-
 	if (!d.validateUser(login, password)) {
 		response.sendRedirect("errorLogin.html");
 	}
