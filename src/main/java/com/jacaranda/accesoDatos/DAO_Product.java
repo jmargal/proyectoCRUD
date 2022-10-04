@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
+
 
 import com.jacaranda.logica.Product;
 
@@ -19,7 +19,7 @@ public class DAO_Product {
 		super();
 
 		try {
-			
+
 			Class.forName("com.mysql.jdbc.Driver");
 			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyectoJSP?useSSL=false", "dummy",
 					"dummy");
@@ -57,24 +57,24 @@ public class DAO_Product {
 	/**
 	 * 
 	 * @param Product
-	 * @return
-	 * Devuelve true si ha podido realizar el cambio y exception si se quiere actualizar algo que no es posible
+	 * @return Devuelve true si ha podido realizar el cambio y exception si se
+	 *         quiere actualizar algo que no es posible
 	 * @throws SQLException
 	 */
 	public boolean updateProduct(Product p) throws SQLException {
 		boolean resul = true;
 		Statement insert = (Statement) conexion.createStatement();
-		//Se crea un objeto Product igual al que nos pasan
+		// Se crea un objeto Product igual al que nos pasan
 		Product aux = findProduct(p.getCode());
 		String cadena = "UPDATE PRODUCT SET ";
 		boolean coma = false;
-		//La coma est� a falsa al empezar, si cambiar un campo se pondr� a true
-		//y a partir de ah� a�ade comas
+		// La coma est� a falsa al empezar, si cambiar un campo se pondr� a true
+		// y a partir de ah� a�ade comas
 		if (!p.getName().equals(aux.getName())) {
 			cadena = cadena + "name='" + p.getName() + "'";
 			coma = true;
 		}
-		//En cada apartado comparo si ha cambiado el que hay en la
+		// En cada apartado comparo si ha cambiado el que hay en la
 		// base de datos y si cambia a�ade a la sentencia
 		if (p.getStock() != aux.getStock()) {
 			if (coma) {
@@ -97,12 +97,12 @@ public class DAO_Product {
 			cadena = cadena + "disponibility='" + p.getAvaliable() + "'";
 			coma = true;
 		}
-		
-		cadena+= "WHERE codProduct='"+p.getCode()+"';";
-		
+
+		cadena += "WHERE codProduct='" + p.getCode() + "';";
+
 		System.out.println(cadena);
-		if(insert.executeUpdate(cadena)==0) {
-			resul=false;
+		if (insert.executeUpdate(cadena) == 0) {
+			resul = false;
 		}
 		return resul;
 
@@ -119,14 +119,18 @@ public class DAO_Product {
 		}
 		return result;
 	}
-	public ArrayList<Product> getDataBase(){
-//		ArrayList<Product> collection=new ArrayList<Product>();
-//		Statement connect=this.conexion.createStatement();
-//		String query="SELECT * FROM PRODUCT";
-//		ResultSet r=connect.executeQuery(query);
-//		while (r.next()) {
-//			collection.push(r);
-//		}
-		return null;
+
+	public ArrayList<Product> getDataBase() throws SQLException {
+		ArrayList<Product> collection = new ArrayList<Product>();
+		Statement connect = this.conexion.createStatement();
+		String query = "SELECT * FROM PRODUCT";
+		ResultSet r = connect.executeQuery(query);
+		while (r.next()) {
+			Product result = new Product(r.getInt("codProduct"), r.getString("name"), r.getInt("stock"),
+					r.getDouble("price"), r.getString("disponibility"), r.getDate("dateArrival"));
+			collection.add(result);
+		}
+		return collection;
 	}
+
 }

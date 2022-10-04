@@ -19,7 +19,7 @@
 	if (!d.validateUser(login, password)) {
 		response.sendRedirect("errorLogin.html");
 	}
-	
+	response.sendRedirect("main.jsp");
 	%>
 
 
