@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body{
+	background-color: #8196FF;
+	padding-left: 25em;
+	padding-right: 25em;
+	padding-top: 15em;
+}
+
+#formulario{
+	padding-bottom: 2.5em;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 20px;
+	background-color: white;
+}
+
+#login{
+	font-family: Arial, Helvetica, Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	color: #163BF1;
+}
+
+#soloContrasena{
+	margin-bottom: 30px;
+	font-family: Helvetica, Verdana;
+}
+
+#soloUsuario{
+	font-family: Helvetica, Verdana;
+}
+
+#boton{
+	font-family: Arial, Helvetica;
+	color: white;
+	background-color: #163BF1;
+	border: 2px solid black;
+	border-radius: 30px;
+}
+
+
