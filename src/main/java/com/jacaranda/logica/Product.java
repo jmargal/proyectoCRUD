@@ -21,6 +21,17 @@ public class Product {
 		this.avaliable = avaliable;
 		this.arrivalDate = arrivalDate;
 	}
+	
+
+	public Product(String name, int stock, double price, String avaliable, Date arrivalDate) {
+		super();
+		this.name = name;
+		this.stock = stock;
+		this.price = price;
+		this.avaliable = avaliable;
+		this.arrivalDate = arrivalDate;
+	}
+
 
 	public int getCode() {
 		return code;
@@ -50,8 +61,8 @@ public class Product {
 		return avaliable;
 	}
 
-	public String getArrivalDate() {
-		return arrivalDate.toString();
+	public Date getArrivalDate() {
+		return arrivalDate;
 	}
 
 	@Override

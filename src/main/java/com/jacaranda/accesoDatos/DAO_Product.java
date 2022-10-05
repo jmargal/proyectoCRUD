@@ -1,11 +1,11 @@
 package com.jacaranda.accesoDatos;
 
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 
@@ -23,9 +23,6 @@ public class DAO_Product {
 			Class.forName("com.mysql.jdbc.Driver");
 			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyectoJSP?useSSL=false", "dummy",
 					"dummy");
-			DatabaseMetaData infoBD = conexion.getMetaData();
-			System.out.println("Base de datos: " + infoBD.getDatabaseProductName());
-			System.out.println("Version: " + infoBD.getDatabaseProductVersion());
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());
 		}
@@ -34,9 +31,12 @@ public class DAO_Product {
 
 	public boolean addProduct(Product p) throws SQLException {
 		boolean resul = false;
+		
+		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+		String dateString=format.format(p.getArrivalDate());
 		Statement insert = (Statement) conexion.createStatement();
 		String cadena = "INSERT INTO PRODUCT VALUES('" + p.getCode() + "','" + p.getName() + "','" + p.getStock()
-				+ "','" + p.getPrice() + "','" + p.getAvaliable() + "','" + p.getArrivalDate() + "');";
+				+ "','" + p.getPrice() + "','" + p.getAvaliable() + "','" + dateString + "');";
 		if (insert.executeUpdate(cadena) != 0) {
 			resul = true;
 		}

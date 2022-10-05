@@ -20,8 +20,8 @@
 					<td>Name</td>
 					<td>Price</td>
 					<td>Avaliable</td>
-					<td>Arrival Date</td>
 					<td>Stock</td>
+					<td>Arrival Date</td>
 					<td>Buttons</td>
 				</tr>
 
@@ -36,7 +36,7 @@
 					<td><%=p.getPrice()%>$</td>
 					<td><%=p.getAvaliable()%></td>
 					<td><%=p.getStock()%></td>
-					<td><%=p.getArrivalDate()%></td>
+					<td><%=p.getArrivalDate().toString()%></td>
 					<td>
 						<a href="delete.jsp?id=<%=p.getCode()%>">Delete</a>
 						<a href="update.jsp?id=<%=p.getCode()%>">Update</a></td>
