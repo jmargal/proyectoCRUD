@@ -40,6 +40,8 @@
 	DAO_Product d=new DAO_Product();
 	d.addProduct(p);
 	%>
-	
+	<a href="main.jsp">
+		<button>Volver</button>
+	</a>
 </body>
 </html>
