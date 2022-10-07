@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +9,7 @@
 <link rel="icon" href="https://images.vexels.com/media/users/3/200097/isolated/preview/942820836246f08c2d6be20a45a84139-icono-de-carrito-de-compras-carrito-de-compras.png" type="image/x-icon">
 </head>
 <body>
+<%session.invalidate(); %>
 <div id="cuerpo">
 	<form action="login.jsp" method="get" id="formulario">
 		<p id="login">HIPER BRENES</p>
