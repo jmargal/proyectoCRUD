@@ -14,12 +14,17 @@
 	String login = request.getParameter("usuario");
 	String password = request.getParameter("contrasena");
 
-	
 	DAO_User d = new DAO_User();
 	if (!d.validateUser(login, password)) {
 		response.sendRedirect("errorLogin.html");
 	}
-	response.sendRedirect("main.jsp");
+	else{
+		HttpSession sesion = request.getSession();
+		sesion.setAttribute("isLogin", "True");
+		sesion.setAttribute("usuario", login);
+		response.sendRedirect("main.jsp");
+	}
+	
 	%>
 
 
