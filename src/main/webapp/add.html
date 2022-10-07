@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="StyleAdd.css">
+<link rel="stylesheet" href="add.css">
 </head>
 <body>
 	<h1>Añade un usuario</h1>
+	<div id="contenedor">
 	<form action="add.jsp">	
 		<label>Name</label><br>
 		<input type="text" name="nom" id="nom" required><br>
@@ -22,8 +23,10 @@
 		
 		<label>Stock</label><br>
 		
-		<input type="number" name="sto" id="sto" min="0" required>
+		<input type="number" name="sto" id="sto" min="0" required><br>
 		<input type="submit" name="bot" id="bot" value="Enviar">
 	</form>
+	</div>
+	
 </body>
 </html>
