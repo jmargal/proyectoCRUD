@@ -2,13 +2,13 @@
 
 body{
 	background-color: #8196FF;
-	padding-left: 25em;
-	padding-right: 25em;
-	padding-top: 15em;
+	padding-left: 40%;
+	padding-right: 40%;
+	padding-top: 12%;
 }
 
 #formulario{
-	padding-bottom: 2.5em;
+	padding-bottom: 12%;
 	text-align: center;
 	border: 2px solid black;
 	border-radius: 20px;
