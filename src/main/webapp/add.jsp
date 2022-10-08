@@ -11,8 +11,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	<h1>Artículo añadido con exito</h1>
+<body style="background-color: #8196FF;">
+	<h1 style="color: white;">Artículo añadido con exito</h1>
 	<%
 	int stock=0;
 	String name="",avaiable="";
