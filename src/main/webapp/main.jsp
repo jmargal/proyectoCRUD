@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="productCSS.css">
 <title>Main</title>
 </head>
 <body>
@@ -27,7 +28,8 @@
 	%>
 	<form action="main.jsp" method="get">
 		<div id="body">
-			<a href="add.jsp" <%%>>Add product</a>
+			<a href="add.html"<%%>>Add product</a><br>
+			<a href="index.jsp">Cerrar Sesión</a>
 			<table id="tabla" border="1">
 				<tr>
 					<td>Code</td>
