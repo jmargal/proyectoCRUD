@@ -9,10 +9,10 @@
 <meta charset="ISO-8859-1">
 <title>Delete</title>
 </head>
-<body>
+<body style="background-color: #8196FF;">
 
 
-	<p>
+	<p style="color: white; padding-left: 25%; ">
 		<%
 		Product p;
 		DAO_Product d = new DAO_Product();
@@ -24,13 +24,13 @@
 		%>
 		?
 	</p>
-	<a href="execDelete.jsp?id=<%=p.getCode()%>">
-		<button>Sí, BORRAR</button>
+	<a href="execDelete.jsp?id=<%=p.getCode()%>" style="padding-left: 25%;">
+		<button style="background-color: #163BF1;color: white;">Sí, BORRAR</button>
 	</a>
 	<br>
 	<br>
-	<a href="main.jsp">
-		<button>Volver</button>
+	<a href="main.jsp" style="padding-left: 25%;">
+		<button style="background-color: #163BF1;color: white;">Volver</button>
 	</a>
 
 
