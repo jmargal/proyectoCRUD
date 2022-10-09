@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Add</title>
 </head>
 <body style="background-color: #8196FF;">
 	<h1 style="color: white;">Artículo añadido con exito</h1>
@@ -41,7 +41,7 @@
 	d.addProduct(p);
 	%>
 	<a href="main.jsp">
-		<button>Volver</button>
+		<button style="background-color:#163BF1; color:white;">Volver</button>
 	</a>
 </body>
 </html>

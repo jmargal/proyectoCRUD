@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="updateHecho.css">
 <meta charset="UTF-8">
 <title>Update</title>
 </head>
