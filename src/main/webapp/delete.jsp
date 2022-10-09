@@ -8,9 +8,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Delete</title>
+<link rel="stylesheet" href="deleteStyle.css">
 </head>
 <body>
+	<%
+	HttpSession sesion = request.getSession();
+	String login = (String) sesion.getAttribute("isLogin");
+	String user = (String) sesion.getAttribute("usuario");
 
+	// Si viene desde el login los atributos tienen valor y entra
+	if (login != null && user != null && login.equals("True")) {
+	%>
+	<%
+	//Le invalido la sesión para que solo pueda entrar desde el login
+	session.invalidate();
+	//Creo una nueva sesión para hacer lo mismo con los otros archivos y solo entren desde el main
+	HttpSession session2 = request.getSession();
+	session2.setAttribute("isLogin", "True");
+	session2.setAttribute("usuario", login);
+	} else {
+	response.sendRedirect("errorLogin.html");
+	}
+	%>
 
 	<p>
 		<%
