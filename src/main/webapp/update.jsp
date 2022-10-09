@@ -22,7 +22,7 @@
 	%>
 	?
 	
-	<form action="main.jsp">
+	<form action="updateHecho.jsp">
 		<p>¿Cómo quieres actualizar el producto?</p>
 		Name: <input type="text" id="name" required> <br><br>
 		Stock: <input type="number" id="stock" required> <br><br>

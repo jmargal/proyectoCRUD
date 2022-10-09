@@ -19,7 +19,13 @@
 
 	// Si viene desde el login los atributos tienen valor y entra
 	if (login != null && user != null && login.equals("True")) {
+		%>
+		<p id="usuarioHola">
+		<% 
 		out.println("Hola " + user);
+		%>
+		</p>
+		<%
 		//Le invalido la sesión para que solo pueda entrar desde el login
 		session.invalidate();
 	} else {
@@ -28,8 +34,8 @@
 	%>
 	<form action="main.jsp" method="get">
 		<div id="body">
-			<a href="add.html"<%%>>Add product</a><br>
-			<a href="index.jsp">Cerrar Sesión</a>
+			<a href="add.html"<%%>>Add product</a>
+			<a href="index.jsp" id="cerrarSesion">Cerrar Sesión</a>
 			<table id="tabla" border="1">
 				<tr>
 					<td>Code</td>
