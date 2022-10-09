@@ -1,7 +1,7 @@
 @charset "UTF-8";
 div{
 	color:white;
-	padding-left: 25%;
+	padding-left: 35%;
 }
 body{
 	background-color: #8196FF;
@@ -12,4 +12,13 @@ a{
 table{
 	margin-top: 2%;
 	border-color: black;
+}
+#usuarioHola{
+	font-family: sans-serif;
+	font-size: 200%;
+	padding-left: 48%;
+	font-weight: bold;
+}
+#cerrarSesion{
+	padding-left: 37%;
 }

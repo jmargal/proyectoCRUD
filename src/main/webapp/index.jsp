@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Iniciar SesiÃ³n</title>
+<title>Iniciar Sesión</title>
 <link rel="stylesheet" href="index.css">
 <link rel="icon" href="https://images.vexels.com/media/users/3/200097/isolated/preview/942820836246f08c2d6be20a45a84139-icono-de-carrito-de-compras-carrito-de-compras.png" type="image/x-icon">
 </head>
@@ -19,10 +19,10 @@
 		</div>
 		<br><br>
 		<div id="soloContrasena">
-			ContraseÃ±a<br>
+			Contraseña<br>
 			<input type="password" required id="contasena" name="contrasena">
 		</div>
-		<input type="submit" value="Iniciar SesiÃ³n" id="boton">
+		<input type="submit" value="Iniciar Sesión" id="boton">
 	</form>
 </div>
 </body>
