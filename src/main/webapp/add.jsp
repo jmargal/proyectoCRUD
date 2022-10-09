@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Add</title>
+<title>Insert title here</title>
 </head>
 <body style="background-color: #8196FF;">
 	<%
@@ -60,7 +60,7 @@
 	d.addProduct(p);
 	%>
 	<a href="main.jsp">
-		<button style="background-color:#163BF1; color:white;">Volver</button>
+		<button>Volver</button>
 	</a>
 </body>
 </html>

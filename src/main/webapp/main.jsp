@@ -26,9 +26,9 @@
 		%>
 	</p>
 	<%
-	//Le invalido la sesión para que solo pueda entrar desde el login
+	//Le invalido la sesiï¿½n para que solo pueda entrar desde el login
 	session.invalidate();
-	//Creo una nueva sesión para hacer lo mismo con los otros archivos y solo entren desde el main
+	//Creo una nueva sesiï¿½n para hacer lo mismo con los otros archivos y solo entren desde el main
 	HttpSession session2 = request.getSession();
 	session2.setAttribute("isLogin", "True");
 	session2.setAttribute("usuario", login);
@@ -39,7 +39,7 @@
 	<form action="main.jsp" method="get">
 		<div id="body">
 			<a href="add.html" <%%>>Add product</a> <a href="index.jsp"
-				id="cerrarSesion">Cerrar Sesión</a>
+				id="cerrarSesion">Cerrar Sesiï¿½n</a>
 			<table id="tabla" border="1">
 				<tr>
 					<td>Code</td>

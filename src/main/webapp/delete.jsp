@@ -11,20 +11,18 @@
 <link rel="stylesheet" href="deleteStyle.css">
 </head>
 <body>
-<body>
 	<%
 	HttpSession sesion = request.getSession();
 	String login = (String) sesion.getAttribute("isLogin");
 	String user = (String) sesion.getAttribute("usuario");
 
-
 	// Si viene desde el login los atributos tienen valor y entra
 	if (login != null && user != null && login.equals("True")) {
 	%>
 	<%
-	//Le invalido la sesión para que solo pueda entrar desde el login
+	//Le invalido la sesiï¿½n para que solo pueda entrar desde el login
 	session.invalidate();
-	//Creo una nueva sesión para hacer lo mismo con los otros archivos y solo entren desde el main
+	//Creo una nueva sesiï¿½n para hacer lo mismo con los otros archivos y solo entren desde el main
 	HttpSession session2 = request.getSession();
 	session2.setAttribute("isLogin", "True");
 	session2.setAttribute("usuario", login);
@@ -33,24 +31,24 @@
 	}
 	%>
 
-	<p style="color: white; padding-left: 25%; ">
+	<p>
 		<%
 		Product p;
 		DAO_Product d = new DAO_Product();
 		p = d.findProduct(Integer.parseInt(request.getParameter("id")));
 		%>
-		¿Desea borrar el producto
+		ï¿½Desea borrar el producto
 		<%
 		out.write(p.toString());
 		%>
 		?
 	</p>
-	<a href="execDelete.jsp?id=<%=p.getCode()%>" class="a">
-		<button>Sí, BORRAR</button>
+	<a href="execDelete.jsp?id=<%=p.getCode()%>">
+		<button>Sï¿½, BORRAR</button>
 	</a>
 	<br>
 	<br>
-	<a href="main.jsp" class="a">
+	<a href="main.jsp">
 		<button>Volver</button>
 	</a>
 
