@@ -6,8 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
-
+import java.util.Date;
 
 import com.jacaranda.logica.Product;
 
@@ -98,12 +100,13 @@ public class DAO_Product {
 			coma = true;
 		}
 
-		cadena += "WHERE codProduct='" + p.getCode() + "';";
+		cadena += "WHERE codProduct=" + p.getCode() + ";";
 
 		System.out.println(cadena);
 		if (insert.executeUpdate(cadena) == 0) {
 			resul = false;
 		}
+		System.out.println(resul);
 		return resul;
 
 	}
@@ -115,7 +118,7 @@ public class DAO_Product {
 		ResultSet r = insert.executeQuery(cadena);
 		while (r.next()) {
 			result = new Product(r.getInt("codProduct"), r.getString("name"), r.getInt("stock"), r.getDouble("price"),
-					r.getString("disponibility"), r.getDate("dateArrival"));
+					r.getString("disponibility"),r.getDate("dateArrival"));
 		}
 		return result;
 	}
@@ -133,4 +136,5 @@ public class DAO_Product {
 		return collection;
 	}
 
+	
 }

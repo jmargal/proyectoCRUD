@@ -8,7 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Delete</title>
-<link rel="stylesheet" href="deleteStyle.css">
+<link rel="stylesheet" href="../css/deleteStyle.css">
 </head>
 <body>
 	<%
@@ -27,7 +27,7 @@
 	session2.setAttribute("isLogin", "True");
 	session2.setAttribute("usuario", login);
 	} else {
-	response.sendRedirect("errorLogin.html");
+	response.sendRedirect("../html/errorLogin.html");
 	}
 	%>
 

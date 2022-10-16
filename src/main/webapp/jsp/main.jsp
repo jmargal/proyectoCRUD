@@ -1,14 +1,14 @@
 <%@page import="com.jacaranda.accesoDatos.DAO_Product"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import="com.jacaranda.*"%>
 <%@ page import="com.jacaranda.logica.*"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="productCSS.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/productCSS.css">
 <title>Main</title>
 </head>
 <body>
@@ -31,15 +31,15 @@
 	//Creo una nueva sesi�n para hacer lo mismo con los otros archivos y solo entren desde el main
 	HttpSession session2 = request.getSession();
 	session2.setAttribute("isLogin", "True");
-	session2.setAttribute("usuario", login);
+	session2.setAttribute("usuario", user);
 	} else {
 	response.sendRedirect("errorLogin.html");
 	}
 	%>
 	<form action="main.jsp" method="get">
 		<div id="body">
-			<a href="add.html" <%%>>Add product</a> <a href="index.jsp"
-				id="cerrarSesion">Cerrar Sesi�n</a>
+			<a href="../html/add.html" <%%>>Add product</a> <a href="index.jsp"
+				id="cerrarSesion">Close Session</a>
 			<table id="tabla" border="1">
 				<tr>
 					<td>Code</td>
@@ -63,7 +63,7 @@
 					<td><%=p.getAvaliable()%></td>
 					<td><%=p.getStock()%></td>
 
-					<td><%=p.getArrivalDate().toString()%></td>
+					<td><%=p.getArrivalDate()%></td>
 					<td><a href="delete.jsp?id=<%=p.getCode()%>">Delete</a> <a
 						href="update.jsp?id=<%=p.getCode()%>">Update</a></td>
 				<tr>

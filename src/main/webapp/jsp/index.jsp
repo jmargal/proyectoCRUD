@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Iniciar Sesión</title>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="../css/index.css">
 <link rel="icon" href="https://images.vexels.com/media/users/3/200097/isolated/preview/942820836246f08c2d6be20a45a84139-icono-de-carrito-de-compras-carrito-de-compras.png" type="image/x-icon">
 </head>
 <body>

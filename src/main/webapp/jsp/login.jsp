@@ -11,17 +11,19 @@
 
 
 	<%
-	String login = request.getParameter("usuario");
+	String user = request.getParameter("usuario");
 	String password = request.getParameter("contrasena");
 
 	DAO_User d = new DAO_User();
-	if (!d.validateUser(login, password)) {
-		response.sendRedirect("errorLogin.html");
+	if (!d.validateUser(user, password)) {
+		response.sendRedirect("../html/errorLogin.html");
 	}
 	else{
 		HttpSession sesion = request.getSession();
+		//Le coloco un atributo True llamado isLogin y uno usuario
+		//donde está el nombre del usuario
 		sesion.setAttribute("isLogin", "True");
-		sesion.setAttribute("usuario", login);
+		sesion.setAttribute("usuario", user);
 		response.sendRedirect("main.jsp");
 	}
 	

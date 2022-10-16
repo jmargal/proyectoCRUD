@@ -20,6 +20,10 @@
 	
 	
 	%>
+	
+	<a href="main.jsp">
+		<button>Volver</button>
+	</a>
 
 </body>
 </html>

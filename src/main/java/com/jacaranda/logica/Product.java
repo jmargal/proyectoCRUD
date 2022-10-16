@@ -1,5 +1,7 @@
 package com.jacaranda.logica;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.Objects;
 
@@ -12,6 +14,16 @@ public class Product {
 	private String avaliable;
 	private Date arrivalDate;
 
+//	public Product(int code, String name, int stock, double price, String avaliable, LocalDate arrivalDate) {
+//		super();
+//		this.code = code;
+//		this.name = name;
+//		this.stock = stock;
+//		this.price = price;
+//		this.avaliable = avaliable;
+//		this.arrivalDate = arrivalDate;
+//	}
+//	
 	public Product(int code, String name, int stock, double price, String avaliable, Date arrivalDate) {
 		super();
 		this.code = code;
@@ -19,7 +31,7 @@ public class Product {
 		this.stock = stock;
 		this.price = price;
 		this.avaliable = avaliable;
-		this.arrivalDate = arrivalDate;
+		this.arrivalDate= arrivalDate;
 	}
 	
 
@@ -81,6 +93,13 @@ public class Product {
 		Product other = (Product) obj;
 		return code == other.code;
 	}
+	
+
+//	private LocalDate convertToLocalDateViaInstant(Date dateToConvert) {
+//	    return dateToConvert.toInstant()
+//	      .atZone(ZoneId.systemDefault())
+//	      .toLocalDate();
+//	}
 
 	@Override
 	public String toString() {

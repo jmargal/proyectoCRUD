@@ -16,6 +16,7 @@ public class Pruebas {
 		DAO_Product dp= new DAO_Product();
 		System.out.println(dp.getDataBase().toString());
 
+		dp.findProduct(4);
 	}
 
 }
